@@ -1,0 +1,30 @@
+@mixin respond($breakpoint){
+    @if $breakpoint == br1 {
+        @media only screen and (max-width: 93.75em){//1500px
+            @content
+        };
+    }
+    @if $breakpoint == br2 {
+        @media only screen and (max-width: 82.8125em){//1325px
+            @content
+        };
+    }
+    @if $breakpoint == br3 {
+        @media only screen and (max-width: 75em){//1200px
+            @content
+        };
+    }
+    @if $breakpoint == br4 {
+        @media only screen and (max-width: 56.25em){//900px
+            @content
+        };
+    }
+    @if $breakpoint == menu {
+        @media only screen and (min-width: 56.25em){@content};}
+        
+    @if $breakpoint == br5 {
+        @media only screen and (max-width: 37.5em){//600px
+            @content
+        };
+    }
+}
