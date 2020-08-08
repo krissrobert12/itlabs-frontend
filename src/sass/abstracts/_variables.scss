@@ -1,5 +1,16 @@
-// add color and other variables here
+$color-primary: rgb(69, 90, 164);
+$color-secondary: rgb(123, 188, 232);
+$color-tertiary: rgb(237, 125, 38);
+$color-grey: rgb(100, 100, 100);
+$color-grey-dark: rgb(60, 60, 60);
+$color-grey-light: rgb(200, 200, 200);
+
+$font-1: 'Nunito Sans', sans-serif;
 
 :root {
     // insert them in root also for js
+    --color-primary: rgb(69, 90, 164);
+    --color-secondary: rgb(123, 188, 232);
+    --color-tertiary: rgb(237, 125, 38);
+    --color-grey-dark: rgb(26, 26, 26);
 }

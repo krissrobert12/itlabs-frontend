@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: 
+        linear-gradient(to bottom left, rgba($color-primary, .8), rgba($color-tertiary, .8)),
+        url('../img/curves1.png');
+        
+    // background: url('../img/curves1.png') no-repeat center center fixed; 
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+}

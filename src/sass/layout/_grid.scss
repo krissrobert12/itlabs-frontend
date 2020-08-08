@@ -1,0 +1,50 @@
+.row {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+    
+    @include respond(br5){
+        padding: 0 1rem;
+    }
+    @include respond(br5){
+        padding: 0 .5rem;
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+    @include respond(br5){
+        grid-column-gap: 0;
+        grid-row-gap: 3rem;
+    }
+
+    &__3 {
+        grid-column: span 3;
+    }
+    &__4 {
+        grid-column: span 4;
+    }
+    &__6 {
+        grid-column: span 6;
+    }
+    &__8 {
+        grid-column: span 8;
+    }
+    &__12 {
+        grid-column: span 12;
+    }
+    
+    &__3,
+    &__4,
+    &__6,
+    &__8,
+    &__12 {
+        @include respond(br4) {
+            grid-column: span 12;
+        }
+    }
+}

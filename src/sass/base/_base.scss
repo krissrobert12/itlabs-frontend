@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(br1){
+        font-size: 56.25%;
+    }
+    @include respond(br3){
+        font-size: 53%;
+    }
+}
+
+// font-family: 'Nunito Sans', sans-serif;
+
+body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+// ::selection {
+//     background-color: ;
+//     color: ;
+// }
+
+img.responsive {
+    width: 100%;
+    height: auto;
+}
