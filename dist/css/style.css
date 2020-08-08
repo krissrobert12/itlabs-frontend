@@ -81,11 +81,15 @@ img.responsive {
       display: block !important; } }
   .nav__item:not(:last-child) {
     margin-right: 4rem; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 67em) {
       .nav__item:not(:last-child) {
         margin-right: 0; } }
   .nav .search {
     margin-right: 4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .nav .search {
+        margin: 0 1rem;
+        flex: 1; } }
   .nav__link {
     display: block;
     color: currentColor;
@@ -97,6 +101,9 @@ img.responsive {
       .nav__link {
         padding: 1.5rem 5rem;
         text-align: right; } }
+    @media only screen and (max-width: 37.5em) {
+      .nav__link {
+        padding: 1.5rem; } }
     .nav__link:not(.nav__link--btn):hover {
       color: #3c3c3c; }
     .nav__link--btn {
@@ -105,7 +112,7 @@ img.responsive {
       padding: 1rem 2.4rem;
       color: #fff;
       font-weight: bold;
-      transition: all .2s; }
+      transition: transform .2s, box-shadow .2s; }
       @media only screen and (max-width: 67em) {
         .nav__link--btn {
           display: inline-block;
@@ -138,12 +145,46 @@ img.responsive {
     display: flex; }
   .nav__burger {
     width: 3.5rem;
-    height: .4rem;
+    height: .3rem;
     background-color: currentColor;
     transition: all .3s;
     transform-origin: left; }
     .nav__burger:not(:last-child) {
       margin-bottom: .75rem; }
+
+.search {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  color: #ed7d26; }
+  .search span, .search__input {
+    color: #3c3c3c; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      justify-content: flex-end; } }
+  .search__before {
+    order: 1; }
+  .search__after {
+    order: 3; }
+  .search__input {
+    order: 2;
+    width: 1.3rem;
+    border: none;
+    outline: none;
+    transition: width .2s;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 1px; }
+  .search:hover .search__input,
+  .search:focus .search__input, .search__input:focus, .search__input:active {
+    width: 15rem;
+    background-color: #f0f0f0; }
+    @media only screen and (max-width: 37.5em) {
+      .search:hover .search__input,
+      .search:focus .search__input, .search__input:focus, .search__input:active {
+        width: 100%; } }
 
 .row {
   max-width: 140rem;

@@ -61,7 +61,7 @@
 
         &:not(:last-child) {
             margin-right: 4rem;
-            @include respond(br4){
+            @include respond(menuMax){
                 margin-right: 0;
             }
         }
@@ -70,6 +70,11 @@
     // move to pages section ?
     .search {
         margin-right: 4rem;
+
+        @include respond(br5) {
+            margin: 0 1rem;
+            flex: 1;
+        }
     }
 
     &__link {
@@ -85,6 +90,10 @@
             text-align: right;
         }
 
+        @include respond(br5){
+            padding: 1.5rem;
+        }
+
         &:not(&--btn):hover {
             color: $color-grey-dark;
         }
@@ -95,7 +104,7 @@
             padding: 1rem 2.4rem;
             color: #fff;
             font-weight: bold;
-            transition: all .2s;
+            transition: transform .2s, box-shadow .2s;
 
             @include respond(menuMax){
                 display: inline-block;
@@ -148,7 +157,7 @@
 
     &__burger {
         width: 3.5rem;
-        height: .4rem;
+        height: .3rem;
         background-color: currentColor;
         transition: all .3s;
         transform-origin: left;
