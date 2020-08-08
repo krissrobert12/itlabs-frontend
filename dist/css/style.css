@@ -41,48 +41,49 @@ img.responsive {
   padding: .5rem 5rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #d4d4d4;
+  -webkit-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
   background-color: #fff; }
-  @media only screen and (max-width: 56.25em) {
-    .nav {
-      flex-wrap: wrap; } }
   @media only screen and (max-width: 37.5em) {
     .nav {
       padding: .5rem 1.5rem; } }
   .nav__logo {
-    padding-right: 4rem;
     height: 6rem;
     margin-right: auto; }
     @media only screen and (max-width: 93.75em) {
       .nav__logo {
         height: 5rem; } }
   .nav__menu {
-    display: block;
-    list-style: none; }
-    @media only screen and (min-width: 56.25em) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    color: #5a5a5a; }
+    @media only screen and (min-width: 67em) {
       .nav__menu {
-        display: block; } }
-    @media only screen and (max-width: 56.25em) {
+        display: flex; } }
+    @media only screen and (max-width: 67em) {
       .nav__menu {
         display: none;
-        margin-top: 1rem;
-        flex: 1 0 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        left: 0;
         background-color: #fff;
-        border-top: .7rem solid #000;
-        color: #000; } }
-  .nav__item {
-    display: inline-block;
-    position: relative; }
+        width: 100%;
+        -webkit-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1); } }
+  @media only screen and (max-width: 67em) {
+    .nav__item {
+      display: block !important; } }
+  .nav__item:not(:last-child) {
+    margin-right: 4rem; }
     @media only screen and (max-width: 56.25em) {
-      .nav__item {
-        display: block; }
-        .nav__item:not(:last-child) > * {
-          border-bottom: 1px solid #000; } }
-    .nav__item:not(:last-child) {
-      margin-right: 4rem; }
-      @media only screen and (max-width: 56.25em) {
-        .nav__item:not(:last-child) {
-          margin-right: 0; } }
+      .nav__item:not(:last-child) {
+        margin-right: 0; } }
   .nav .search {
     margin-right: 4rem; }
   .nav__link {
@@ -91,26 +92,58 @@ img.responsive {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: bold;
-    position: relative; }
-    @media only screen and (max-width: 56.25em) {
+    font-size: 1.4rem; }
+    @media only screen and (max-width: 67em) {
       .nav__link {
-        padding: 1.5rem 2rem; } }
+        padding: 1.5rem 5rem;
+        text-align: right; } }
+    .nav__link:not(.nav__link--btn):hover {
+      color: #3c3c3c; }
+    .nav__link--btn {
+      background-image: linear-gradient(to right, #455aa4, #ed7d26);
+      border-radius: 10rem;
+      padding: 1rem 2.4rem;
+      color: #fff;
+      font-weight: bold;
+      transition: all .2s; }
+      @media only screen and (max-width: 67em) {
+        .nav__link--btn {
+          display: inline-block;
+          padding: 1.5rem 5rem;
+          backface-visibility: hidden;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent; } }
+      @media only screen and (max-width: 37.5em) {
+        .nav__link--btn {
+          padding: 1.5rem; } }
+      @media only screen and (min-width: 67em) {
+        .nav__link--btn:hover {
+          transform: translateY(-0.2rem);
+          -webkit-box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2); } }
   .nav__button {
     display: none;
-    color: #ed7d26;
+    color: #5a5a5a;
     cursor: pointer; }
-    @media only screen and (max-width: 56.25em) {
+    .nav__button:hover {
+      color: #3c3c3c; }
+    .nav__button.active {
+      color: #ed7d26; }
+    @media only screen and (max-width: 67em) {
       .nav__button {
         display: block; } }
+  .nav__button.active ~ .nav__menu {
+    display: flex; }
   .nav__burger {
-    width: 4.2rem;
+    width: 3.5rem;
     height: .4rem;
     background-color: currentColor;
     transition: all .3s;
     transform-origin: left; }
     .nav__burger:not(:last-child) {
-      margin-bottom: 1rem; }
+      margin-bottom: .75rem; }
 
 .row {
   max-width: 140rem;
@@ -149,8 +182,4 @@ img.responsive {
 
 .header {
   width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: linear-gradient(to bottom left, rgba(69, 90, 164, 0.8), rgba(237, 125, 38, 0.8)), url("../img/curves1.png"); }
+  height: 100vh; }
