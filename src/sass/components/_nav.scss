@@ -1,0 +1,173 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .5rem 5rem;
+    display: flex;
+    align-items: center;
+    // border-bottom: 1px solid rgb(212, 212, 212);
+    -webkit-box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
+    box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
+    background-color: #fff;
+
+    @include respond(br5){
+        padding: .5rem 1.5rem;
+    }
+
+    //LOGO
+    &__logo {
+        height: 6rem;
+        margin-right: auto;
+
+        @include respond(br1) {
+            height: 5rem;
+        }
+    }
+
+    //MENU
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        color: $color-grey;
+
+        @include respond(menuMin) {
+            display: flex;
+        }
+
+        @include respond(menuMax){
+            display:none;
+            flex-direction: column;
+            align-items: flex-end;
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            background-image: url(../img/circuits1.png);
+            background-size: 100%;
+            background-position: left;
+            background-repeat: no-repeat;
+            width: 100%;
+            -webkit-box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
+            box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
+        }
+    }
+
+    &__item {
+        @include respond(menuMax){
+            display: block !important;
+        }
+
+        &:not(:last-child) {
+            margin-right: 4rem;
+            @include respond(menuMax){
+                margin-right: 0;
+            }
+        }
+    }
+
+    // move to pages section ?
+    .search {
+        margin-right: 4rem;
+
+        @include respond(br5) {
+            margin: 0 1rem;
+            flex: 1;
+        }
+    }
+
+    &__link {
+        display: block;
+        color: currentColor;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+
+        @include respond(menuMax){
+            padding: 1.5rem 5rem;
+            text-align: right;
+        }
+
+        @include respond(br5){
+            padding: 1.5rem;
+        }
+
+        &:not(&--btn):hover {
+            color: $color-grey-dark;
+        }
+
+        &--btn {
+            background-image: linear-gradient(to right, #455aa4, #ed7d26);
+            border-radius: 10rem;
+            padding: 1rem 2.4rem;
+            color: #fff;
+            font-weight: bold;
+            transition: transform .2s, box-shadow .2s;
+
+            @include respond(menuMax){
+                display: inline-block;
+                padding: 1.5rem 5rem;
+                backface-visibility: hidden;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+    
+            @include respond(br5){
+                padding: 1.5rem;
+            }
+
+            @include respond(menuMin){
+                &:hover {
+                    transform: translateY(-0.2rem);
+                    -webkit-box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
+                    -moz-box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
+                    box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
+                }
+            }
+        }
+    }
+
+    //BUTTON
+    &__button {
+        display: none;
+        color: $color-grey;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-grey-dark;
+        }
+
+        &.active {
+            color: $color-tertiary;
+        }
+
+        @include respond(menuMax) {
+            display: block;
+        }
+    }
+
+
+    // Event when clicking button
+    &__button.active ~ &__menu {
+        display: flex;
+    }
+
+    &__burger {
+        width: 3.5rem;
+        height: .3rem;
+        background-color: currentColor;
+        transition: all .3s;
+        transform-origin: left;
+
+        &:not(:last-child) {
+            margin-bottom: .75rem;
+        }
+    }
+}

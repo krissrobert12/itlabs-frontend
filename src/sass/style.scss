@@ -4,3 +4,12 @@
 
 @import 'base/base';
 @import 'base/typography';
+
+@import 'components/nav';
+@import 'components/search';
+@import 'components/grid-item';
+
+@import 'layout/grid';
+@import 'layout/header';
+
+@import 'pages/home';
