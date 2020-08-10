@@ -39,6 +39,21 @@ img.responsive {
 
 .u-vpadding {
   padding: 10rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .u-vpadding {
+      padding: 5rem 0; } }
+
+.color-section--primary {
+  background-color: #455aa4; }
+
+.color-section--secondary {
+  background-color: #7bbce8; }
+
+.color-section--tertiary {
+  background-color: #ed7d26; }
+
+.color-section--grey-light {
+  background-color: #fafafa; }
 
 .heading-primary {
   font-size: 9rem;
@@ -47,6 +62,8 @@ img.responsive {
   letter-spacing: .5rem;
   line-height: 1.2;
   padding-bottom: 1rem; }
+  .heading-primary--main {
+    color: #3c3c3c; }
   @media only screen and (max-width: 82.8125em) {
     .heading-primary {
       letter-spacing: .2rem;
@@ -242,6 +259,26 @@ img.responsive {
       .search:focus .search__input, .search__input:focus, .search__input:active {
         width: 100%; } }
 
+.grid-item {
+  display: grid;
+  grid-template-rows: 4rem auto;
+  grid-template-columns: 100%; }
+  .grid-item__circle {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #455aa4;
+    justify-self: center;
+    z-index: 20; }
+  .grid-item__text {
+    padding: 5rem 3rem 3rem 3rem;
+    border-radius: .5rem;
+    background-color: #f0f0f0;
+    -webkit-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+    z-index: 10; }
+
 .row {
   max-width: 140rem;
   margin: 0 auto;
@@ -276,8 +313,10 @@ img.responsive {
 
 .header {
   width: 100%;
-  padding: 10rem 0;
-  min-height: 62.5rem; }
+  padding: 10rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      padding: 5rem 0; } }
   .header__img {
     width: 100%;
     height: auto; }

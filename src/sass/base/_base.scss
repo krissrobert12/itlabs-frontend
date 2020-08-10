@@ -42,4 +42,15 @@ img.responsive {
 
 .u-vpadding {
     padding: 10rem 0;
+
+    @include respond(br4) {
+        padding: 5rem 0;
+    }
+}
+
+.color-section {
+    &--primary {background-color: $color-primary;}
+    &--secondary {background-color: $color-secondary;}
+    &--tertiary {background-color: $color-tertiary;}
+    &--grey-light {background-color: $color-grey-light-1;}
 }
