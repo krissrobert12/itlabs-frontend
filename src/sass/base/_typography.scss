@@ -1,0 +1,73 @@
+.heading-primary {
+    font-size: 9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+
+    @include respond(br2) {
+        letter-spacing: .2rem;
+        font-size: 8rem;
+    }
+
+    @include respond(br3) {
+        letter-spacing: 0;
+        font-size: 7rem;
+    }
+
+    @include respond(br4) {
+        letter-spacing: 0;
+        font-size: 6rem;
+        padding-bottom: 3rem;
+    }
+
+
+    & span {
+        &::before {
+            color:  $color-tertiary;
+            text-transform: none;
+            content: "${\`";
+        }
+        &::after {
+            color: $color-tertiary;
+            content: "\`}";
+        }
+    }
+}
+
+.span {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.4rem;
+
+    // position: relative;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -2px;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 2px;
+    //     background-color: $color-tertiary;
+    // }
+
+    &::before {
+        color:  $color-grey-dark;
+        //text-transform: none;
+        content: "const motto = \"";
+    }
+    &::after {
+        color: $color-grey-dark;
+        content: "\";";
+    }
+    
+    &--main {
+        color:  $color-tertiary;
+    }
+}
+
+.paragraph {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
