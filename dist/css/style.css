@@ -98,6 +98,15 @@ img.responsive {
   .span--main {
     color: #ed7d26; }
 
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  line-height: 1.2;
+  padding-bottom: 2rem;
+  color: #3c3c3c; }
+
 .paragraph {
   font-size: 1.8rem;
   font-weight: 300; }
@@ -267,9 +276,14 @@ img.responsive {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    background-color: #455aa4;
     justify-self: center;
     z-index: 20; }
+    .grid-item__circle--1 {
+      background-color: #455aa4; }
+    .grid-item__circle--2 {
+      background-color: #7bbce8; }
+    .grid-item__circle--3 {
+      background-color: #ed7d26; }
   .grid-item__text {
     padding: 5rem 3rem 3rem 3rem;
     border-radius: .5rem;
@@ -283,6 +297,8 @@ img.responsive {
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 5rem; }
+  .row:not(:last-of-type) {
+    margin-bottom: 2rem; }
   @media only screen and (max-width: 37.5em) {
     .row {
       padding: 0 1.5rem; } }

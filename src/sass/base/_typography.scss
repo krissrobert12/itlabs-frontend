@@ -71,6 +71,16 @@
     }
 }
 
+.heading-secondary {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: 1.2;
+    padding-bottom: 2rem;
+    color: $color-grey-dark;
+}
+
 .paragraph {
     font-size: 1.8rem;
     font-weight: 300;
