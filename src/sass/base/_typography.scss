@@ -94,6 +94,19 @@
     }
 }
 
+.heading-tertiary {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding-bottom: .5rem;
+
+    &--grey-dark {
+        color: $color-grey-dark;
+    }
+}
+
 .paragraph {
     font-size: 1.8rem;
     font-weight: 300;
