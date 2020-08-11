@@ -64,6 +64,13 @@ img.responsive {
   padding-bottom: 1rem; }
   .heading-primary--main {
     color: #3c3c3c; }
+    .heading-primary--main span::before {
+      color: #ed7d26;
+      text-transform: none;
+      content: "${\`"; }
+    .heading-primary--main span::after {
+      color: #ed7d26;
+      content: "\`}"; }
   @media only screen and (max-width: 82.8125em) {
     .heading-primary {
       letter-spacing: .2rem;
@@ -77,26 +84,24 @@ img.responsive {
       letter-spacing: 0;
       font-size: 6rem;
       padding-bottom: 3rem; } }
-  .heading-primary span::before {
-    color: #ed7d26;
-    text-transform: none;
-    content: "${\`"; }
-  .heading-primary span::after {
-    color: #ed7d26;
-    content: "\`}"; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      letter-spacing: 0;
+      font-size: 4.5rem;
+      padding-bottom: 3rem; } }
 
 .span {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 1.4rem; }
-  .span::before {
-    color: #3c3c3c;
-    content: "const motto = \""; }
-  .span::after {
-    color: #3c3c3c;
-    content: "\";"; }
   .span--main {
     color: #ed7d26; }
+    .span--main::before {
+      color: #3c3c3c;
+      content: "const motto = \""; }
+    .span--main::after {
+      color: #3c3c3c;
+      content: "\";"; }
 
 .heading-secondary {
   font-size: 3rem;
@@ -104,8 +109,21 @@ img.responsive {
   text-transform: uppercase;
   letter-spacing: .2rem;
   line-height: 1.2;
-  padding-bottom: 2rem;
-  color: #3c3c3c; }
+  padding-bottom: 2rem; }
+  .heading-secondary--grey-dark {
+    color: #3c3c3c; }
+  @media only screen and (max-width: 82.8125em) {
+    .heading-secondary {
+      letter-spacing: .1rem;
+      font-size: 2.8rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      letter-spacing: 0;
+      font-size: 2.5rem;
+      padding-bottom: 1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
 
 .paragraph {
   font-size: 1.8rem;
