@@ -554,3 +554,16 @@ img.responsive {
     .header .grid > * {
       align-items: center;
       text-align: center; } }
+
+.features .row {
+  width: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .features .row {
+      max-width: 60rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .features .row {
+      max-width: 100%; } }
+
+@media only screen and (max-width: 56.25em) {
+  .features .grid {
+    column-gap: 0; } }

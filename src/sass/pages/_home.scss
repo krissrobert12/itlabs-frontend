@@ -16,3 +16,22 @@
         }
     }
 }
+
+.features {
+    & .row {
+        width: 100%;
+
+        @include respond(br4) {
+            max-width: 60rem;
+        }
+        @include respond(br5) {
+            max-width: 100%;
+        }
+    }
+
+    & .grid {
+        @include respond(br4) {
+            column-gap: 0;
+        }
+    }
+}
