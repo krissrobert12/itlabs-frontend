@@ -19,6 +19,12 @@
             @content
         };
     }
+    @if $breakpoint == br5 {
+        @media only screen and (max-width: 37.5em){//600px
+            @content
+        };
+    }
+
     @if $breakpoint == menuMax {
         @media only screen and (max-width: 67em){
             @content
@@ -31,12 +37,6 @@
     }
     @if $breakpoint == menuMin {
         @media only screen and (min-width: 67em){
-            @content
-        };
-    }
-        
-    @if $breakpoint == br5 {
-        @media only screen and (max-width: 37.5em){//600px
             @content
         };
     }
