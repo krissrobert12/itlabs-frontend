@@ -635,7 +635,7 @@ img.responsive {
 .footer {
   padding-top: 10rem;
   padding-bottom: 5rem;
-  background-color: #1e1e1e; }
+  background-color: #455aa4; }
   .footer__logo {
     width: 100%;
     height: auto;
@@ -664,19 +664,39 @@ img.responsive {
     width: 2.5rem;
     height: 2.5rem;
     margin-right: 1rem;
-    fill: #fff; }
+    fill: #7bbce8; }
   .footer__link, .footer__link:active, .footer__link:focus, .footer__link:visited {
-    color: #aaaaaa;
+    color: #fff;
     text-decoration: none; }
   .footer__link:hover {
     color: #fff;
     text-decoration: underline; }
   .footer__text {
-    color: #aaaaaa; }
+    color: #fff; }
   .footer__legal {
-    color: #3c3c3c; }
+    color: #fff; }
   @media only screen and (max-width: 56.25em) {
     .footer__filler {
       display: none; } }
   .footer__filler::before {
     content: " "; }
+  .footer__newsletter {
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%; }
+  .footer__input {
+    outline-color: #7bbce8;
+    font-size: 1.8rem;
+    border: 0;
+    margin: 0;
+    flex: 1; }
+  .footer__submit {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding: .5rem 1rem;
+    border-radius: unset;
+    outline-color: #7bbce8;
+    border: 0; }
