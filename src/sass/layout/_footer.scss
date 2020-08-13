@@ -1,0 +1,80 @@
+.footer {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-color: $color-grey-dark-2;
+
+    &__logo {
+        width: 100%;
+        height: auto;
+        max-width: 25rem;
+    }
+
+    &__heading {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 5rem;
+        font-size: 1.8rem;
+        font-weight: 300;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+    }
+
+    &__icon-box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        fill: #fff;
+    }
+
+    &__link {
+        &,
+        &:active,
+        &:focus,
+        &:visited {
+            color: $color-grey-footer;
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    &__text {
+        color: $color-grey-footer;
+    }
+
+    &__legal {
+        color: $color-grey-dark;
+    }
+
+    &__filler {
+        @include respond(br4) {
+            display: none;
+        }
+
+        &::before {
+            content: " ";
+        }
+    }
+}

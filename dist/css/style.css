@@ -167,7 +167,7 @@ img.responsive {
     flex-direction: row;
     align-items: stretch;
     list-style: none;
-    color: #5a5a5a; }
+    color: #3c3c3c; }
     @media only screen and (min-width: 67em) {
       .nav__menu {
         display: flex; } }
@@ -319,10 +319,10 @@ img.responsive {
   .nav__button {
     align-self: center;
     display: none;
-    color: #5a5a5a;
+    color: #3c3c3c;
     cursor: pointer; }
     .nav__button:hover {
-      color: #3c3c3c; }
+      color: #1e1e1e; }
     .nav__button.active {
       color: #ed7d26; }
     @media only screen and (max-width: 67em) {
@@ -586,6 +586,8 @@ img.responsive {
     .grid {
       column-gap: 0;
       row-gap: 3rem; } }
+  .grid__2 {
+    grid-column: span 2; }
   .grid__3 {
     grid-column: span 3; }
   .grid__4 {
@@ -594,10 +596,14 @@ img.responsive {
     grid-column: span 6; }
   .grid__8 {
     grid-column: span 8; }
+  .grid__9 {
+    grid-column: span 9; }
+  .grid__10 {
+    grid-column: span 10; }
   .grid__12 {
     grid-column: span 12; }
   @media only screen and (max-width: 56.25em) {
-    .grid__3, .grid__4, .grid__6, .grid__8, .grid__12 {
+    .grid__2, .grid__3, .grid__4, .grid__6, .grid__8, .grid__9, .grid__10, .grid__12 {
       grid-column: span 12; } }
 
 .header {
@@ -625,3 +631,52 @@ img.responsive {
       .header .grid > * {
         align-items: center;
         text-align: center; } }
+
+.footer {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: #1e1e1e; }
+  .footer__logo {
+    width: 100%;
+    height: auto;
+    max-width: 25rem; }
+  .footer__heading {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center; }
+  .footer__title {
+    color: #fff;
+    margin-bottom: 5rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: .3rem;
+    text-transform: uppercase; }
+  .footer__icon-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; }
+    .footer__icon-box:not(:last-child) {
+      margin-bottom: .5rem; }
+  .footer__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    fill: #fff; }
+  .footer__link, .footer__link:active, .footer__link:focus, .footer__link:visited {
+    color: #aaaaaa;
+    text-decoration: none; }
+  .footer__link:hover {
+    color: #fff;
+    text-decoration: underline; }
+  .footer__text {
+    color: #aaaaaa; }
+  .footer__legal {
+    color: #3c3c3c; }
+  @media only screen and (max-width: 56.25em) {
+    .footer__filler {
+      display: none; } }
+  .footer__filler::before {
+    content: " "; }

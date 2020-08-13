@@ -34,6 +34,9 @@
         row-gap: 3rem;
     }
 
+    &__2 {
+        grid-column: span 2;
+    }
     &__3 {
         grid-column: span 3;
     }
@@ -46,14 +49,23 @@
     &__8 {
         grid-column: span 8;
     }
+    &__9 {
+        grid-column: span 9;
+    }
+    &__10 {
+        grid-column: span 10;
+    }
     &__12 {
         grid-column: span 12;
     }
     
+    &__2,
     &__3,
     &__4,
     &__6,
     &__8,
+    &__9,
+    &__10,
     &__12 {
         @include respond(br4) {
             grid-column: span 12;
