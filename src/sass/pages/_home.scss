@@ -1,7 +1,7 @@
-.header {
-    
-}
+.splide__slide {
+    padding: 2.5rem;
 
-.features {
-    
+    @include respond(br4) {
+        padding: 1rem;
+    }
 }

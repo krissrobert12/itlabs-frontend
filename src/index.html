@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT-Labs</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -85,7 +86,7 @@
     </header>
 
     <section class="features color-section--grey-light u-vpadding">
-        <div class="row">
+        <div class="row row--respond">
             <h2 class="heading-secondary heading-secondary--grey-dark">Secondary heading</h2>
 
             <div class="grid">
@@ -240,6 +241,74 @@
         </div>
     </section>
 
+
+    <section id="cursuri" class="u-vpadding">
+        <div class="row row--fluid">
+            <!-- Slider -->
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        
+                        <li class="splide__slide">
+                            <!-- Course component -->
+                            <div class="course">
+                                <img src="img/course.jpg" alt="" class="course__img">
+                                <div class="course__duration">
+                                    <svg class="course__icon">
+                                        <use xlink:href="img/sprite.svg#icon-stopwatch"></use>
+                                    </svg>
+                                    <div class="course__time">2.5 ore</div>
+                                </div>
+                                <div class="course__title">Titlul cursului</div>
+                                <div class="course__description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime aspernatur voluptatem minima, minus nihil eos vitae. Molestiae dicta labore ratione eveniet ducimus illum dolor ab. Cum alias aliquam atque similique.
+                                </div>
+                            </div>
+                            <!-- END Course component -->
+                        </li>
+                        <li class="splide__slide">
+                            <!-- Course component -->
+                            <div class="course">
+                                <img src="img/course.jpg" alt="" class="course__img">
+                                <div class="course__duration">
+                                    <svg class="course__icon">
+                                        <use xlink:href="img/sprite.svg#icon-stopwatch"></use>
+                                    </svg>
+                                    <div class="course__time">2.5 ore</div>
+                                </div>
+                                <div class="course__title">Titlul cursului</div>
+                                <div class="course__description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime aspernatur voluptatem minima, minus nihil eos vitae. Molestiae dicta labore ratione eveniet ducimus illum dolor ab. Cum alias aliquam atque similique.
+                                </div>
+                            </div>
+                            <!-- END Course component -->
+                        </li>
+                        <li class="splide__slide">
+                            <!-- Course component -->
+                            <div class="course">
+                                <img src="img/course.jpg" alt="" class="course__img">
+                                <div class="course__duration">
+                                    <svg class="course__icon">
+                                        <use xlink:href="img/sprite.svg#icon-stopwatch"></use>
+                                    </svg>
+                                    <div class="course__time">2.5 ore</div>
+                                </div>
+                                <div class="course__title">Titlul cursului</div>
+                                <div class="course__description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime aspernatur voluptatem minima, minus nihil eos vitae. Molestiae dicta labore ratione eveniet ducimus illum dolor ab. Cum alias aliquam atque similique.
+                                </div>
+                            </div>
+                            <!-- END Course component -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END Slider -->
+        </div>
+    </section>
+    
+
+
     <footer class="footer">
         <div class="row">
             
@@ -383,5 +452,6 @@
         </div><!--END ROW-->
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 </body>
 </html>
