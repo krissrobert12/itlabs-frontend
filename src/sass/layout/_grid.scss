@@ -5,12 +5,22 @@
     padding: 0 5rem;
 
     @include respond(br4) {
-        max-width: 60rem;
+        max-width: 100%;
     }
 
     @include respond(br5){
         padding: 0 1.5rem;
-        max-width: 100%;
+        
+    }
+
+    &--respond {
+        @include respond(br4) {
+            max-width: 60rem;
+        }
+    
+        @include respond(br5){
+            max-width: 100%;
+        }
     }
 }
 
