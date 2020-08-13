@@ -98,12 +98,16 @@
     }
 
     &__submit {
+        font-family: inherit;
+        font-weight: 400;
         font-size: 1.8rem;
         text-transform: uppercase;
         margin: 0;
         padding: .5rem 1rem;
         border-radius: unset;
-        outline-color: #7bbce8;
+        color: #fff;
+        outline-color: currentColor;
+        background-color: $color-tertiary;
         border: 0;
     }
 }
