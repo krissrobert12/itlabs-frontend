@@ -35,7 +35,7 @@
         flex-direction: row;
         align-items: stretch;
         list-style: none;
-        color: $color-grey;
+        color: $color-grey-dark;
 
         @include respond(menuMin) {
             display: flex;
@@ -242,11 +242,11 @@
     &__button {
         align-self: center;
         display: none;
-        color: $color-grey;
+        color: $color-grey-dark;
         cursor: pointer;
 
         &:hover {
-            color: $color-grey-dark;
+            color: $color-grey-dark-2;
         }
 
         &.active {
