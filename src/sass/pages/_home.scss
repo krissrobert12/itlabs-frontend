@@ -1,37 +1,7 @@
 .header {
-    & .row,
-    & .grid {
-        height: 100%;
-    }
-
-    & .grid > * {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        @include respond(br4) {
-            align-items: center;
-            text-align: center;
-        }
-    }
+    
 }
 
 .features {
-    & .row {
-        width: 100%;
-
-        @include respond(br4) {
-            max-width: 60rem;
-        }
-        @include respond(br5) {
-            max-width: 100%;
-        }
-    }
-
-    & .grid {
-        @include respond(br4) {
-            column-gap: 0;
-        }
-    }
+    
 }

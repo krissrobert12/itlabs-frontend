@@ -559,25 +559,33 @@ img.responsive {
     border-left: 0.5rem solid #455aa4; }
 
 .row {
+  width: 100%;
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 5rem; }
-  .row:not(:last-of-type) {
-    margin-bottom: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 60rem; } }
   @media only screen and (max-width: 37.5em) {
     .row {
-      padding: 0 1.5rem; } }
+      padding: 0 1.5rem;
+      max-width: 100%; } }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  grid-row-gap: 5rem;
-  grid-column-gap: 5rem; }
+  row-gap: 5rem;
+  column-gap: 5rem; }
+  .grid:not(:last-of-type) {
+    margin-bottom: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .grid {
+      column-gap: 0; } }
   @media only screen and (max-width: 37.5em) {
     .grid {
-      grid-column-gap: 0;
-      grid-row-gap: 3rem; } }
+      column-gap: 0;
+      row-gap: 3rem; } }
   .grid__3 {
     grid-column: span 3; }
   .grid__4 {
@@ -603,33 +611,17 @@ img.responsive {
     height: auto; }
     @media only screen and (max-width: 56.25em) {
       .header__img {
-        width: 50%;
-        min-width: 30rem;
+        max-width: 40rem;
         margin: 0 auto; } }
-
-.header .row,
-.header .grid {
-  height: 100%; }
-
-.header .grid > * {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  @media only screen and (max-width: 56.25em) {
-    .header .grid > * {
-      align-items: center;
-      text-align: center; } }
-
-.features .row {
-  width: 100%; }
-  @media only screen and (max-width: 56.25em) {
-    .features .row {
-      max-width: 60rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .features .row {
-      max-width: 100%; } }
-
-@media only screen and (max-width: 56.25em) {
-  .features .grid {
-    column-gap: 0; } }
+  .header .row,
+  .header .grid {
+    height: 100%; }
+  .header .grid > * {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    @media only screen and (max-width: 56.25em) {
+      .header .grid > * {
+        align-items: center;
+        text-align: center; } }

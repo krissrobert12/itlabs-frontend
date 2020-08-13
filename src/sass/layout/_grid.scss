@@ -1,26 +1,37 @@
 .row {
+    width: 100%;
     max-width: 140rem;
     margin: 0 auto;
     padding: 0 5rem;
-    
-    &:not(:last-of-type) {
-        margin-bottom: 5rem;
+
+    @include respond(br4) {
+        max-width: 60rem;
     }
 
     @include respond(br5){
         padding: 0 1.5rem;
+        max-width: 100%;
     }
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
+    row-gap: 5rem;
+    column-gap: 5rem;
 
-    grid-row-gap: 5rem;
-    grid-column-gap: 5rem;
+    &:not(:last-of-type) {
+        margin-bottom: 5rem;
+    }
+
+    @include respond(br4) {
+        column-gap: 0;
+    }
+
     @include respond(br5){
-        grid-column-gap: 0;
-        grid-row-gap: 3rem;
+        column-gap: 0;
+        row-gap: 3rem;
     }
 
     &__3 {
