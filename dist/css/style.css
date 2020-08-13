@@ -382,13 +382,20 @@ img.responsive {
     height: 8rem;
     border-radius: 50%;
     justify-self: center;
-    z-index: 20; }
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .grid-item__circle--1 {
       background-color: #455aa4; }
     .grid-item__circle--2 {
       background-color: #7bbce8; }
     .grid-item__circle--3 {
       background-color: #ed7d26; }
+  .grid-item__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: #fff; }
   .grid-item__text {
     padding: 5rem 3rem 3rem 3rem;
     border-radius: .5rem;
