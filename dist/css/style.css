@@ -596,6 +596,87 @@ img.responsive {
     padding-top: 1rem;
     text-align: justify; }
 
+.accordion {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: min-content;
+  row-gap: 5rem;
+  column-gap: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .accordion {
+      grid-template-columns: 100%;
+      grid-template-rows: 20rem auto; } }
+  .accordion--primary .accordion__bar {
+    background-color: #455aa4; }
+  .accordion--primary .accordion__heading {
+    color: #fff; }
+  .accordion--primary .accordion__btn {
+    background-color: #3c3c3c; }
+    .accordion--primary .accordion__btn::before, .accordion--primary .accordion__btn::after {
+      background-color: #f0f0f0; }
+  .accordion__img {
+    grid-column: 1 / 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    @media only screen and (max-width: 56.25em) {
+      .accordion__img {
+        grid-row: 1 / 2; } }
+    .accordion__img--1 {
+      background-image: url("../img/course.jpg"); }
+  .accordion__content {
+    grid-column: 2 / 3; }
+    @media only screen and (max-width: 56.25em) {
+      .accordion__content {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3; } }
+  .accordion__item {
+    display: flex;
+    flex-direction: column; }
+    .accordion__item:not(:last-of-type) {
+      margin-bottom: 1rem; }
+  .accordion__bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer; }
+  .accordion__bar.active .accordion__btn::before, .accordion__bar.active .accordion__btn::after {
+    transform: translate(-50%, -50%) rotate(45deg); }
+  .accordion__heading {
+    padding: 0 1.5rem;
+    flex: 1;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .accordion__btn {
+    height: 4rem;
+    width: 4rem;
+    position: relative; }
+    .accordion__btn::before, .accordion__btn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 50%;
+      transform: translate(-50%, -50%) rotate(0);
+      transition: transform .2s; }
+    .accordion__btn::before {
+      width: 50%;
+      height: .4rem; }
+    .accordion__btn::after {
+      width: .4rem;
+      height: 50%; }
+  .accordion__aspect-ratio {
+    height: 100%;
+    width: auto; }
+  .accordion__content {
+    display: none;
+    padding: 2rem;
+    background-color: #fafafa; }
+  .accordion__text {
+    font-size: 1.8rem;
+    font-weight: 300; }
+
 .row {
   width: 100%;
   max-width: 140rem;

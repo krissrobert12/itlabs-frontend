@@ -1,6 +1,6 @@
 import * as navView from './views/navView';
 import {domStrings, resizeAwait} from './models/base';
-
+import * as accordionView from './views/accordionView';
 
 
 /**
@@ -9,7 +9,8 @@ import {domStrings, resizeAwait} from './models/base';
 
 document.querySelector(domStrings.navBtn).addEventListener('click', navView.toggleMenu);
 
-
+accordionView.init();
+accordionView.addFirstActive();
 
 
 /**
