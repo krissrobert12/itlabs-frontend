@@ -1,6 +1,10 @@
 export const domStrings = {
     navBtn: '.nav__button',
-    navMenu: '.nav__menu'
+    navMenu: '.nav__menu',
+    accordion: '.accordion',
+    accordionBar: '.accordion__bar',
+    accordionContent: '.accordion__content',
+    accordionItem: '.accordion__item'
 }
 
 export const resizeAwait = (callback) => {
