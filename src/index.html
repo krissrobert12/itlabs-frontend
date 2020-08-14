@@ -10,20 +10,24 @@
 </head>
 <body>
     <nav class="nav">
+        <!-- LOGO -->
         <img title="IT-Labs" src="img/logo.png" alt="IT-Labs Logo" class="nav__logo">
 
+        <!-- SEARCH compomemt -->
         <form class="search" action="" method="get">
             <div class="search__before"><span>Search</span>{</div>
             <input class="search__input" placeholder="..." type="text" name="query" id="">
             <div class="search__after">}</div>
         </form>
 
+        <!-- MENU Button -->
         <div class="nav__button">
             <div class="nav__burger"></div>
             <div class="nav__burger"></div>
             <div class="nav__burger"></div>
         </div>
 
+        <!-- MENU LINKS -->
         <ul class="nav__menu">
             <li class="nav__item">
                 <a href="#" class="nav__link">Despre IT-Labs</a>
@@ -64,10 +68,53 @@
             <li class="nav__item">
                 <a href="#" class="nav__link">Blog</a>
             </li>
-            <li class="nav__item">
-                <a href="#" class="nav__link nav__link--btn">Log in</a>
-            </li>
+
+            <!-- ACCOUNT PREFERENCES -->
+            <div class="nav__account">
+                <div class="languages">
+                    <div class="languages__active">
+                        <svg class="languages__chevron">
+                            <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                        </svg>
+                        <svg class="languages__icon">
+                            <use xlink:href="img/sprite.svg#icon-ro"></use>
+                        </svg>
+                    </div>
+                    
+                    <div class="languages__dropdown">
+                        <a href="#" class="languages__link">
+                            <svg class="languages__icon">
+                                <use xlink:href="img/sprite.svg#icon-uk"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="languages__link">
+                            <svg class="languages__icon">
+                                <use xlink:href="img/sprite.svg#icon-ger"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="languages__link">
+                            <svg class="languages__icon">
+                                <use xlink:href="img/sprite.svg#icon-hu"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="languages__link">
+                            <svg class="languages__icon">
+                                <use xlink:href="img/sprite.svg#icon-srb"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav__log-in">
+                    <a href="#" class="nav__log-in-btn">Log in</a>
+                </div>
+        
+            </div>
         </ul>
+
     </nav>
 
     <header class="header">

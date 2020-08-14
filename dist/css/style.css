@@ -151,7 +151,10 @@ img.responsive {
   -webkit-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
-  background-color: #fff; }
+  background-color: #fff;
+  /*****************************
+    **** ACCOUNT SECTION
+    ******************************/ }
   @media only screen and (max-width: 37.5em) {
     .nav {
       padding: 0 1.5rem; } }
@@ -176,6 +179,7 @@ img.responsive {
         display: none;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
         position: absolute;
         top: 100%;
         left: 0;
@@ -195,7 +199,6 @@ img.responsive {
     @media only screen and (max-width: 37.5em) {
       .nav__menu {
         padding: 0 1.5rem;
-        padding-bottom: 1rem;
         flex-direction: column;
         align-items: flex-end; } }
   .nav__item {
@@ -231,30 +234,17 @@ img.responsive {
     letter-spacing: 2px;
     font-size: 1.4rem;
     position: relative; }
-    .nav__link:not(.nav__link--btn):hover {
+    .nav__link:hover {
       color: #3c3c3c; }
     @media only screen and (max-width: 67em) {
       .nav__link {
         padding: .5rem 0;
         font-weight: 800;
         text-align: right; } }
-    .nav__link--btn {
-      background-image: linear-gradient(to right, #455aa4, #ed7d26);
-      border-radius: 10rem;
-      padding: 1rem 2.4rem;
-      color: #fff;
-      font-weight: bold;
-      white-space: nowrap;
-      transition: transform .2s, box-shadow .2s; }
-      @media only screen and (min-width: 67em) {
-        .nav__link--btn:hover {
-          transform: translateY(-0.2rem);
-          -webkit-box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2); } }
   .nav__sub-menu {
     display: none;
     list-style-type: none;
+    padding: 2rem;
     position: absolute;
     top: 100%;
     left: 50%;
@@ -262,7 +252,6 @@ img.responsive {
     border-top: 1px solid #f0f0f0;
     border-bottom-left-radius: .3rem;
     border-bottom-right-radius: .3rem;
-    padding: 2rem;
     background-color: #fff;
     -webkit-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
@@ -338,6 +327,55 @@ img.responsive {
     transform-origin: left; }
     .nav__burger:not(:last-child) {
       margin-bottom: .75rem; }
+  .nav__account {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; }
+    .nav__account > *:not(:last-child) {
+      margin-right: 4rem; }
+    @media only screen and (max-width: 67em) {
+      .nav__account {
+        margin-top: 1rem;
+        flex: 1;
+        flex-basis: 100%;
+        justify-content: flex-end;
+        background-color: #fafafa;
+        position: relative;
+        padding: 1rem 1px; }
+        .nav__account::before, .nav__account::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 6rem;
+          height: 100%;
+          background-color: #fafafa; }
+        .nav__account::before {
+          right: calc(100% - 1px); }
+        .nav__account::after {
+          left: calc(100% - 1px); } }
+  .nav__log-in {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .nav__log-in-btn, .nav__log-in-btn:active, .nav__log-in-btn:focus, .nav__log-in-btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    position: relative;
+    background-image: linear-gradient(to right, #455aa4, #ed7d26);
+    border-radius: 10rem;
+    padding: 1rem 2.4rem;
+    color: #fff;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: all .2s, box-shadow .2s; }
+  .nav__log-in-btn:hover {
+    transform: translateY(-0.2rem);
+    -webkit-box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2); }
 
 .search {
   display: flex;
@@ -595,6 +633,81 @@ img.responsive {
     padding: 2rem;
     padding-top: 1rem;
     text-align: justify; }
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+  .languages__active {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    order: 2; }
+  .languages__dropdown {
+    display: none;
+    padding: 1rem; }
+    @media only screen and (min-width: 67em) {
+      .languages__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 1px solid #f0f0f0;
+        border-bottom-left-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0.5rem 0.5rem 0px rgba(0, 0, 0, 0.1); } }
+    @media only screen and (max-width: 67em) {
+      .languages__dropdown {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        order: 1; } }
+    .languages__dropdown::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 2px;
+      background-color: #ed7d26; }
+      @media only screen and (max-width: 67em) {
+        .languages__dropdown::before {
+          content: unset; } }
+  .languages__icon {
+    width: 2rem;
+    height: 2rem; }
+  .languages__chevron {
+    width: 2rem;
+    height: 2rem; }
+    @media only screen and (max-width: 67em) {
+      .languages__chevron {
+        transform: rotate(90deg); } }
+  .languages__link, .languages__link:visited, .languages__link:active, .languages__link:focus {
+    text-decoration: none;
+    display: flex; }
+  .languages__link:not(:first-child) {
+    padding-top: 1rem; }
+  @media only screen and (max-width: 67em) {
+    .languages__link {
+      padding-top: 0;
+      margin-right: 1.5rem; } }
+  .languages:hover .languages__dropdown {
+    display: block; }
+    @media only screen and (max-width: 67em) {
+      .languages:hover .languages__dropdown {
+        display: flex; } }
+  .languages:hover .languages__chevron {
+    transform: rotate(180deg); }
+    @media only screen and (max-width: 67em) {
+      .languages:hover .languages__chevron {
+        transform: rotate(-90deg); } }
 
 .row {
   width: 100%;

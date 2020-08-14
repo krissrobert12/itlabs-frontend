@@ -41,10 +41,11 @@
             display: flex;
         }
 
-        @include respond(menuMax){
+        @include respond(menuMax) {
             display:none;
             align-items: flex-start;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             position: absolute;
             top: 100%;
@@ -69,7 +70,6 @@
 
         @include respond(br5) {
             padding: 0 1.5rem;
-            padding-bottom: 1rem;
             flex-direction: column;
             align-items: flex-end;
         }
@@ -122,7 +122,7 @@
         font-size: 1.4rem;
         position: relative;
 
-        &:not(&--btn):hover {
+        &:hover {
             color: $color-grey-dark;
         }
 
@@ -131,43 +131,15 @@
             font-weight: 800;
             text-align: right;
         }
-
-        &--btn {
-            background-image: linear-gradient(to right, #455aa4, #ed7d26);
-            border-radius: 10rem;
-            padding: 1rem 2.4rem;
-            color: #fff;
-            font-weight: bold;
-            white-space: nowrap;
-            transition: transform .2s, box-shadow .2s;
-
-            @include respond(menuMin){
-                &:hover {
-                    transform: translateY(-0.2rem);
-                    -webkit-box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
-                    -moz-box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
-                    box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
-                }
-            }
-        }
     }
 
     // SUB-MENU
     &__sub-menu {
         display: none;
         list-style-type: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border-top: 1px solid $color-grey-light-2;
-        border-bottom-left-radius: .3rem;
-        border-bottom-right-radius: .3rem;
         padding: 2rem;
-        background-color: #fff;
-        -webkit-box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
-        -moz-box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
-        box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
+        @include dropdown;
+        
 
         @include respond(menuMax) {
             background-color: unset;
@@ -273,6 +245,82 @@
 
         &:not(:last-child) {
             margin-bottom: .75rem;
+        }
+    }
+
+
+    /*****************************
+    **** ACCOUNT SECTION
+    ******************************/
+    &__account {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+
+        & >*:not(:last-child) {
+            margin-right: 4rem;
+        }
+
+        @include respond(menuMax) {
+            margin-top: 1rem;
+            flex: 1;
+            flex-basis: 100%;
+            justify-content: flex-end;
+            background-color: $color-grey-light-1;
+            position: relative;
+            padding: 1rem 1px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 6rem;
+                height: 100%;
+                background-color: $color-grey-light-1;
+            }
+            &::before {
+                right: calc(100% - 1px);
+            }
+            &::after {
+                left: calc(100% - 1px);
+            }
+        }
+    }
+
+    // LOG IN
+
+    &__log-in {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__log-in-btn {
+        &,
+        &:active,
+        &:focus,
+        &:visited {
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.4rem;
+            position: relative;
+            background-image: linear-gradient(to right, #455aa4, #ed7d26);
+            border-radius: 10rem;
+            padding: 1rem 2.4rem;
+            color: #fff;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all .2s, box-shadow .2s;
+        }
+        
+        &:hover {
+            transform: translateY(-0.2rem);
+            -webkit-box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
+            box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
         }
     }
 }
