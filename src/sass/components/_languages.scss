@@ -70,10 +70,13 @@
 
         &:not(:first-child) {
             padding-top: 1rem;
+            
+            @include respond(menuMax) {
+                padding-top: 0;
+            }
         }
 
         @include respond(menuMax) {
-            padding-top: 0;
             margin-right: 1.5rem;
         }
     }
