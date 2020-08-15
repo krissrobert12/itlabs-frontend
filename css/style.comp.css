@@ -162,7 +162,7 @@ img.responsive {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 5000;
+  z-index: 9999;
   padding: 0 5rem;
   display: flex;
   align-items: stretch;
@@ -1005,22 +1005,6 @@ img.responsive {
     outline-color: currentColor;
     background-color: #ed7d26;
     border: 0; }
-
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right bottom, #fff, #f0f0f0);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .loader img {
-    width: 100%;
-    height: auto;
-    max-width: 30rem; }
 
 .splide__slide {
   padding: 2.5rem; }
