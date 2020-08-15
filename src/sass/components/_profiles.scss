@@ -76,16 +76,52 @@
         font-size: 1.4rem;
     }
 
-    &__description {
+    &__container {
         flex: 1;
-        // default
+        padding: 1.5rem;
+        border-left: .5rem solid $color-primary;
+    }
+
+    &__description {
         font-size: 1.6rem;
         font-weight: 300;
-        padding: 1.5rem;
-        //letter-spacing: .5px;
         line-height: 1.4;
         text-align: justify;
+    }
 
-        border-left: .5rem solid $color-primary;
+    &__media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    &__link {
+        &,
+        &:visited,
+        &:active,
+        &:focus {
+            display: inline-block;
+            background-color: $color-primary;
+            border-radius: 50%;
+            padding: .5rem;
+            line-height: 0;
+        }
+
+        &:hover {
+            background-color: $color-secondary;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+        
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: #fff;
     }
 }
