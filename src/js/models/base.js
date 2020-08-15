@@ -4,7 +4,9 @@ export const domStrings = {
     accordion: '.accordion',
     accordionBar: '.accordion__bar',
     accordionContent: '.accordion__content',
-    accordionItem: '.accordion__item'
+    accordionItem: '.accordion__item',
+    circuitCanvas: '.circuit__canvas',
+    circuitBackground: '.circuit__background'
 }
 
 export const resizeAwait = (callback) => {

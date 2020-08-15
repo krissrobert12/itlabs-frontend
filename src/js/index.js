@@ -1,7 +1,8 @@
 import * as navView from './views/navView';
 import {domStrings, resizeAwait} from './models/base';
 import * as accordionView from './views/accordionView';
-
+import * as data from './models/Data';
+import * as circuitCtrl from './circuitController';
 
 /**
  * MAIN APP CONTROLLER
@@ -16,6 +17,7 @@ accordionView.addFirstActive();
 /**
  * SLIDERS CONTROLLER
  */
+
 
 // Functions
 const mountSliders = (sliders) => {
@@ -74,3 +76,20 @@ const updateSliders = () => {
 };
 
 resizeAwait(updateSliders);
+
+/**
+ * CIRCUIT CONTROLLER
+ */
+
+circuitCtrl.create(
+    'circuit0',
+    {
+        staticData: data.staticData,
+        dynamicData: data.dynamicData
+    },
+    {
+        x: 100,
+        y: 100
+    },
+    'rgb(250, 250, 250)'
+);
