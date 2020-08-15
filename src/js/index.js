@@ -13,6 +13,11 @@ document.querySelector(domStrings.navBtn).addEventListener('click', navView.togg
 accordionView.init();
 accordionView.addFirstActive();
 
+window.addEventListener('load', () => {
+    document.querySelector(domStrings.loader).style.display = 'none';
+});
+
+
 
 /**
  * SLIDERS CONTROLLER

@@ -6,7 +6,8 @@ export const domStrings = {
     accordionContent: '.accordion__content',
     accordionItem: '.accordion__item',
     circuitCanvas: '.circuit__canvas',
-    circuitBackground: '.circuit__background'
+    circuitBackground: '.circuit__background',
+    loader: '.loader'
 }
 
 export const resizeAwait = (callback) => {

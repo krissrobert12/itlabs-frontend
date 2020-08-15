@@ -8,7 +8,16 @@
   --color-primary: rgb(69, 90, 164);
   --color-secondary: rgb(123, 188, 232);
   --color-tertiary: rgb(237, 125, 38);
-  --color-grey-dark: rgb(26, 26, 26); }
+  --color-grey-dark: rgb(26, 26, 26);
+  --color-grey: rgb(90, 90, 90);
+  --color-grey-2: rgb(160, 160, 160);
+  --color-grey-footer: rgb(170, 170, 170);
+  --color-grey-dark: rgb(60, 60, 60);
+  --color-grey-dark-2: rgb(30, 30, 30);
+  --color-grey-light-1: rgb(250, 250, 250);
+  --color-grey-light-2: rgb(240, 240, 240);
+  --color-grey-light-3: rgb(200, 200, 200);
+  --font-1: 'Nunito Sans', sans-serif; }
 
 * {
   margin: 0;
@@ -54,6 +63,15 @@ img.responsive {
 
 .color-section--grey-light {
   background-color: #fafafa; }
+
+.u-flex {
+  display: flex; }
+
+.u-flex-align-center {
+  align-items: center; }
+
+.u-flex-justify-center {
+  justify-content: center; }
 
 .heading-primary {
   font-size: 9rem;
@@ -144,7 +162,7 @@ img.responsive {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 5000;
   padding: 0 5rem;
   display: flex;
   align-items: stretch;
@@ -813,6 +831,29 @@ img.responsive {
     font-size: 1.8rem;
     font-weight: 300; }
 
+.circuit {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto; }
+  .circuit > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  .circuit__background {
+    z-index: 250;
+    align-self: stretch; }
+    .circuit__background--primary {
+      background-color: #455aa4; }
+    .circuit__background--grey {
+      background-color: #fafafa; }
+  .circuit__canvas {
+    z-index: 300; }
+  .circuit__overlay {
+    z-index: 500; }
+    .circuit__overlay > * {
+      background: unset; }
+
 .row {
   width: 100%;
   max-width: 140rem;
@@ -964,6 +1005,22 @@ img.responsive {
     outline-color: currentColor;
     background-color: #ed7d26;
     border: 0; }
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right bottom, #fff, #f0f0f0);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .loader img {
+    width: 100%;
+    height: auto;
+    max-width: 30rem; }
 
 .splide__slide {
   padding: 2.5rem; }
