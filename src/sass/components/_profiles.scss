@@ -109,6 +109,10 @@
             line-height: 0;
         }
 
+        &:hover {
+            background-color: $color-secondary;
+        }
+
         &:not(:last-child) {
             margin-right: 1rem;
         }

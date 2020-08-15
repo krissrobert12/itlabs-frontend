@@ -615,6 +615,8 @@ img.responsive {
     border-radius: 50%;
     padding: .5rem;
     line-height: 0; }
+  .profiles__link:hover {
+    background-color: #7bbce8; }
   .profiles__link:not(:last-child) {
     margin-right: 1rem; }
   .profiles__icon {
