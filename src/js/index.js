@@ -56,10 +56,15 @@ const generate = () => {
         perPage: 3,
     }));
     perPage.push(3);
+
+    sliders.push(new Splide('.splide-full', {
+        type   : 'loop',
+        perPage: 1,
+    }));
+    perPage.push(1);
 }
 
 generate();
-
 updatePerPage(activeSlider);
 mountSliders(sliders);
 

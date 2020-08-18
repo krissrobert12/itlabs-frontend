@@ -5,3 +5,11 @@
         padding: 1rem;
     }
 }
+
+.splide-full .splide__slide {
+    padding: 0;
+
+    @include respond(br4) {
+        padding: 0;
+    }
+}
