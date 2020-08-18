@@ -14,6 +14,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'cookie-policy.html',
+            template: './src/cookie-policy.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'gdpr.html',
+            template: './src/gdpr.html'
         })
     ],
     module: {

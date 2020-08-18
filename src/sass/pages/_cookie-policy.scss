@@ -1,0 +1,9 @@
+.cookie-info {
+    & .row:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    & p.paragraph:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}

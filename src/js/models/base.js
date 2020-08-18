@@ -6,7 +6,9 @@ export const domStrings = {
     accordionContent: '.accordion__content',
     accordionItem: '.accordion__item',
     circuitCanvas: '.circuit__canvas',
-    circuitBackground: '.circuit__background'
+    circuitBackground: '.circuit__background',
+    cookiePopup: '.cookie',
+    cookieBtn: '.cookie__btn'
 }
 
 export const resizeAwait = (callback) => {

@@ -1,0 +1,56 @@
+.cookie {
+    padding: 1rem 5rem;
+    @include respond(br4) {
+        padding: 1rem 1.5rem;
+    }
+
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba($color-grey-light-2, 0.95);
+    color: $color-grey-dark;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.8rem;
+    @include respond(br4) {
+        font-size: 1.6rem;
+    }
+
+    //display: flex;
+    align-items: center;
+    z-index: 8000;
+
+    &__link {
+        &,
+        &:active,
+        &:focus,
+        &:visited {
+            color: $color-primary;
+        }
+
+        &:hover {color: $color-secondary;}
+    }
+
+    &__text {
+        flex: 1;
+    }
+
+    &__btn {
+        color: #fff;
+        background-color: $color-primary;
+        border-radius: .4rem;
+        padding: 1rem 2rem;
+        margin-left: 2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {background-color: $color-secondary;}
+    }
+
+    &.show {
+        display: flex;
+    }
+}

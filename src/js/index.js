@@ -3,6 +3,7 @@ import {domStrings, resizeAwait} from './models/base';
 import * as accordionView from './views/accordionView';
 import * as data from './models/Data';
 import * as circuitCtrl from './circuitController';
+import * as cookieView from './views/cookieView';
 
 /**
  * MAIN APP CONTROLLER
@@ -98,3 +99,12 @@ circuitCtrl.create(
     },
     'rgb(250, 250, 250)'
 );
+
+/**
+ * COOKIE CONTROLLER
+ */
+
+
+window.addEventListener('load', cookieView.checkSessionValue);
+
+document.querySelector(domStrings.cookieBtn).addEventListener('click', cookieView.createSessionValue);
