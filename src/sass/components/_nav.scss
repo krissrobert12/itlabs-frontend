@@ -24,6 +24,12 @@
         height: 6.5rem;
         margin-right: auto;
 
+        img {
+            display: block;
+            height: 100%;
+            width: auto;
+        }
+
         @include respond(br1) {
             height: 5.5rem;
         }

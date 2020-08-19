@@ -1,3 +1,4 @@
+import Splide from '@splidejs/splide';
 import * as navView from './views/navView';
 import {domStrings, resizeAwait} from './models/base';
 import * as accordionView from './views/accordionView';
@@ -15,10 +16,10 @@ accordionView.init();
 accordionView.addFirstActive();
 
 
+
 /**
  * SLIDERS CONTROLLER
  */
-
 
 // Functions
 const mountSliders = (sliders) => {
@@ -40,7 +41,6 @@ const updatePerPage = (nextSlider) => {
 };
 
 const isViewportSmall = () => (window.innerWidth < 816);
-
 
 // Variable declarations
 let sliders = [];
@@ -69,7 +69,6 @@ generate();
 updatePerPage(activeSlider);
 mountSliders(sliders);
 
-
 const updateSliders = () => {
     let nextSlider = isViewportSmall();
     if (activeSlider != nextSlider) {
@@ -80,8 +79,9 @@ const updateSliders = () => {
         mountSliders(sliders);
     }
 };
-
 resizeAwait(updateSliders);
+
+
 
 /**
  * CIRCUIT CONTROLLER
@@ -106,5 +106,3 @@ circuitCtrl.create(
 
 
 window.addEventListener('load', cookieView.checkSessionValue);
-
-document.querySelector(domStrings.cookieBtn).addEventListener('click', cookieView.createSessionValue);
