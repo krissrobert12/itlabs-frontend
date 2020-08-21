@@ -59,7 +59,7 @@ export default class Line {
             context.moveTo(pts[0].x, pts[0].y);
             
             // if it has a circle, then leave out the last point
-            const offset = this.hasCircle ? 1 : 0;
+            // const offset = this.hasCircle ? 1 : 0;
             for(let i = 1; i < pts.length && i < restrict; i++) {
                 context.lineTo(pts[i].x, pts[i].y);
             }
@@ -99,7 +99,7 @@ export default class Line {
                 yOffset = mapped[i].y - mapped[i - 1].y;
                 
                 // Number of points to generate in a line
-                // Next point is 3 px apart by default
+                // Next point is 5 px apart by default
                 dist = Math.sqrt(xOffset * xOffset + yOffset * yOffset);
                 intervals = Math.floor(dist / 5);
 
