@@ -10,7 +10,7 @@
     color: $color-tertiary;
     & span, 
     &__input {
-        color: $color-grey-dark;
+        color: $color-grey;
     }
 
     @include respond(br5) {
@@ -43,6 +43,6 @@
         @include respond(br5) {
             width: 100%;
         }
-        background-color: rgb(240, 240, 240);
+        background-color: rgb(245, 245, 245);
     }
 }

@@ -1,6 +1,9 @@
 export const domStrings = {
     navBtn: '.nav__button',
     navMenu: '.nav__menu',
+    navItem: '.nav__item',
+    navLink: '.nav__link',
+    navSubMenu: '.nav__sub-menu',
     accordion: '.accordion',
     accordionBar: '.accordion__bar',
     accordionContent: '.accordion__content',

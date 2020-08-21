@@ -20,7 +20,7 @@
 
     //LOGO
     &__logo {
-        padding: .5rem;
+        padding: .5rem 0;
         height: 6.5rem;
         margin-right: auto;
 
@@ -35,13 +35,23 @@
         }
     }
 
+    // If a search component is in the menu
+    .search {
+        margin-right: 3rem;
+
+        @include respond(br5) {
+            margin: 0 1rem;
+            flex: 1;
+        }
+    }
+
     //MENU
     &__menu {
         display: flex;
         flex-direction: row;
         align-items: stretch;
         list-style: none;
-        color: $color-grey-dark;
+        color: $color-grey;
 
         @include respond(menuMin) {
             display: flex;
@@ -49,15 +59,13 @@
 
         @include respond(menuMax) {
             display:none;
-            align-items: flex-start;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
 
             position: absolute;
             top: 100%;
             left: 0;
             background-color: #fff;
-            background-image: linear-gradient(rgba(#fff, 0.7), rgba(#fff, 0.7)), url(../img/circuits1.png);
+            //background-image: linear-gradient(rgba(#fff, 0.7), rgba(#fff, 0.7)), url(../img/circuits1.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -66,57 +74,52 @@
             -moz-box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
             box-shadow: 0px .5rem .5rem 0px rgba(0,0,0,0.1);
 
-             // Place scroll-bar on the right
             overflow-y: scroll;
             overflow-x: hidden;
             max-height: calc(100vh - 5.5rem);
-
-            padding: 0 5rem;
-        }
-
-        @include respond(br5) {
-            padding: 0 1.5rem;
-            flex-direction: column;
-            align-items: flex-end;
         }
     }
 
     &__item {
         display: flex;
         align-items: center;
-        justify-content: center;
-        //sub-menu requires
         position: relative;
-        // Place scroll-bar on the right
 
-        @include respond(menuMax) {
-            flex-basis: auto;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        @include respond(menuMax-2) {
-            flex-basis: 0;
-        }
         &:not(:last-child) {
-            margin-right: 4rem;
+            margin-right: 3rem;
 
-            @include respond(menuMax){
+            @include respond(menuMax) {
                 margin-right: 0;
             }
         }
+
+        @include respond(menuMax) {
+            border-top: 1px solid $color-grey-light-2;
+            padding: 0 5rem;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &:hover {
+                background-color: rgba($color-grey-light-2, 0.5);
+            }
+        }
+
+        @include respond(br5){
+            padding: 0 1.5rem;
+        }
     }
 
-    &__item:hover > &__sub-menu {
-        display: block;
+    @include respond(menuMax) {
+        &__item.active &__link {
+            color: $color-tertiary;
+        }
     }
 
-    // If a search component is in the menu
-    .search {
-        margin-right: 4rem;
-
-        @include respond(br5) {
-            margin: 0 1rem;
-            flex: 1;
+    @include respond(menuMin) {
+        &__item:hover > &__sub-menu {
+            // Overcome the jquery slideup inline styles
+            display: block !important;
         }
     }
 
@@ -133,9 +136,9 @@
         }
 
         @include respond(menuMax) {
-            padding: .5rem 0;
-            font-weight: 800;
-            text-align: right;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
     }
 
@@ -146,19 +149,6 @@
         padding: 2rem;
         @include dropdown;
         
-
-        @include respond(menuMax) {
-            background-color: unset;
-            display: block;
-            position: static;
-            transform: unset;
-            border: unset;
-            border-radius: unset;
-            border-right: 1px solid $color-tertiary;
-            padding: 0;
-            box-shadow: unset;
-        }
-
         &::before {
             content: "";
             position: absolute;
@@ -175,23 +165,29 @@
                 content: unset;
             }
         }
+
+        @include respond(menuMax) {
+            position: initial;
+            transform: none;
+            border: none;
+            padding: 0;
+            box-shadow: none;
+            background: none;
+
+            padding-left: 2rem;
+            border-left: .2rem solid $color-tertiary;
+        }
     }
 
     &__sub-item {
+        display: block;
+
         &:not(:last-of-type) {
             margin-bottom: 2rem;
 
             @include respond(menuMax) {
-                margin: 0;
+                margin-bottom: 0;
             }
-        }
-
-        @include respond(menuMax) {
-            padding: .5rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            padding-right: 1rem;
         }
     }
 
@@ -199,6 +195,7 @@
         &,
         &:active,
         &:focus {
+            display: block;
             color: currentColor;
             text-decoration: none;
             text-transform: uppercase;
@@ -206,7 +203,8 @@
             font-size: 1.4rem;
 
             @include respond(menuMax) {
-                text-align: right;
+                padding: 1rem 0;
+                font-size: 1.5rem;
             }
         }
         
@@ -220,11 +218,11 @@
     &__button {
         align-self: center;
         display: none;
-        color: $color-grey-dark;
+        color: $color-grey;
         cursor: pointer;
 
         &:hover {
-            color: $color-grey-dark-2;
+            color: $color-grey-dark;
         }
 
         &.active {
@@ -264,34 +262,31 @@
         flex-direction: row;
         align-items: stretch;
 
-        & >*:not(:last-child) {
-            margin-right: 4rem;
+        & > *:not(:last-child) {
+            margin-right: 3rem;
+
+            @include respond(menuMax) {
+                margin-right: 0;
+            }
         }
 
         @include respond(menuMax) {
-            margin-top: 1rem;
             flex: 1;
             flex-basis: 100%;
-            justify-content: flex-end;
+            //justify-content: flex-end;
             background-color: $color-grey-light-1;
             position: relative;
-            padding: 1rem 1px;
+            padding: 1rem 5rem;
+        }
 
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                width: 6rem;
-                height: 100%;
-                background-color: $color-grey-light-1;
-            }
-            &::before {
-                right: calc(100% - 1px);
-            }
-            &::after {
-                left: calc(100% - 1px);
-            }
+        @include respond(br5) {
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    &__account .languages {
+        @include respond(menuMax) {
+            order: 2;
         }
     }
 
@@ -301,6 +296,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include respond(menuMax) {
+            order: 1;
+            margin-right: 3rem;
+        }
     }
 
     &__log-in-btn {
@@ -328,5 +328,7 @@
             -moz-box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
             box-shadow: 0px .5rem 1rem 0px rgba(0,0,0,0.2);
         }
+
+        
     }
 }

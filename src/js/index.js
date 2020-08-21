@@ -11,6 +11,18 @@ import * as cookieView from './views/cookieView';
  */
 
 document.querySelector(domStrings.navBtn).addEventListener('click', navView.toggleMenu);
+document.querySelectorAll(domStrings.navItem).forEach(elem => {
+    elem.addEventListener('click', navView.toggleItemActive);
+});
+
+const resetMenu = () => {
+    if (window.innerWidth >= 816) {
+        navView.closeItems();
+        navView.closeMenu();
+    }
+}
+
+resizeAwait(resetMenu);
 
 accordionView.init();
 accordionView.addFirstActive();
@@ -100,9 +112,10 @@ circuitCtrl.create(
     'rgb(250, 250, 250)'
 );
 
+
+
 /**
  * COOKIE CONTROLLER
  */
-
 
 window.addEventListener('load', cookieView.checkSessionValue);
