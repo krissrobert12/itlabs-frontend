@@ -146,6 +146,7 @@
     &__sub-menu {
         display: none;
         list-style-type: none;
+        white-space: nowrap;
         padding: 2rem;
         @include dropdown;
         

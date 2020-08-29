@@ -41,10 +41,10 @@ img.responsive {
 }
 
 .u-vpadding {
-    padding: 10rem 0;
+    padding: 15rem 0;
 
     @include respond(br4) {
-        padding: 5rem 0;
+        padding: 7rem 0;
     }
 }
 
@@ -55,6 +55,7 @@ img.responsive {
     &--grey-light {background-color: $color-grey-light-1;}
 }
 
+// Are these even used?
 .u-flex {
     display: flex;
 }
@@ -63,4 +64,8 @@ img.responsive {
 }
 .u-flex-justify-center {
     justify-content: center;
+}
+
+.u-text-center {
+    text-align: center;
 }

@@ -24,8 +24,8 @@ const resetMenu = () => {
 
 resizeAwait(resetMenu);
 
-// accordionView.init();
-// accordionView.addFirstActive();
+accordionView.init();
+accordionView.addFirstActive();
 
 
 
@@ -64,22 +64,22 @@ const generate = () => {
     sliders = [];
     perPage = [];
 
-    // sliders.push(new Splide('.splide', {
-    //     type   : 'loop',
-    //     perPage: 3,
-    // }));
-    // perPage.push(3);
+    sliders.push(new Splide('.splide-test-3', {
+        type   : 'loop',
+        perPage: 3,
+    }));
+    perPage.push(3);
 
-    // sliders.push(new Splide('.splide-full', {
-    //     type   : 'loop',
-    //     perPage: 1,
-    // }));
-    // perPage.push(1);
+    sliders.push(new Splide('.splide-test-full', {
+        type   : 'loop',
+        perPage: 1,
+    }));
+    perPage.push(1);
 }
 
-// generate();
-// updatePerPage(activeSlider);
-// mountSliders(sliders);
+generate();
+updatePerPage(activeSlider);
+mountSliders(sliders);
 
 const updateSliders = () => {
     let nextSlider = isViewportSmall();
@@ -99,18 +99,18 @@ resizeAwait(updateSliders);
  * CIRCUIT CONTROLLER
  */
 
-// circuitCtrl.create(
-//     'circuit0',
-//     {
-//         staticData: data.staticData,
-//         dynamicData: data.dynamicData
-//     },
-//     {
-//         x: 100,
-//         y: 100
-//     },
-//     'rgb(250, 250, 250)'
-// );
+circuitCtrl.create(
+    'circuit0',
+    {
+        staticData: data.staticData,
+        dynamicData: data.dynamicData
+    },
+    {
+        x: 100,
+        y: 100
+    },
+    'rgb(250, 250, 250)'
+);
 
 
 

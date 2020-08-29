@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         main: './src/js/index.js',
+        template: './src/js/template.js',
         cookie: './src/js/cookie-policy.js',
         gdpr: './src/js/gdpr.js'
     },
@@ -29,6 +30,11 @@ module.exports = {
             filename: 'gdpr.html',
             template: './src/gdpr.html',
             chunks: ['gdpr']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'template.html',
+            template: './src/template.html',
+            chunks: ['template']
         })
     ],
     module: {

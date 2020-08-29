@@ -1,10 +1,10 @@
 .header {
     width: 100%;
-    padding: 10rem 0;
+    // padding: 10rem 0;
     
-    @include respond(br4) {
-        padding: 5rem 0;
-    }
+    // @include respond(br4) {
+    //     padding: 5rem 0;
+    // }
 
     &__img {
         width: 100%;
@@ -35,6 +35,10 @@
 
     & .btn-update {
         align-self: flex-start;
+
+        @include respond(br4) {
+            align-self: unset;
+        }
     }
 }
 

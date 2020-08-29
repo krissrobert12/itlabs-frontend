@@ -1,0 +1,15 @@
+.splide-test-3 .splide__slide {
+    padding: 2.5rem;
+
+    @include respond(br4) {
+        padding: 1rem;
+    }
+}
+
+.splide-test-full .splide__slide {
+    padding: 0;
+
+    @include respond(br4) {
+        padding: 0;
+    }
+}
