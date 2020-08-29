@@ -1,13 +1,17 @@
 .video-section {
-    // background-image: linear-gradient(
-    //     rgba($color-grey-light-1, 0.8), 
-    //     rgba($color-grey-light-1, 0.8)),
-    //     url('../img/random-2.png');
-    // background-size: 100%;
-    // background-repeat: repeat;
-
     background-image: url(../img/noise-grey-400.png);
     background-repeat: repeat;
+    transform: skewY(6deg);
+    position: relative;
+
+    // -webkit-box-shadow: 0 .5rem 1rem 0 rgba(#000, 0.1);
+    // -moz-box-shadow: 0 .5rem 1rem 0 rgba(#000, 0.1);
+    // box-shadow: 0 .5rem 1rem 0 rgba(#000, 0.1);
+
+    & > * {
+        transform: skewY(-6deg);
+        z-index: 10;
+    }
 
     &__text {
         display: flex;
