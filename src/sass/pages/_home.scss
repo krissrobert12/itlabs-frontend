@@ -1,17 +1,11 @@
 .video-section {
     background-image: url(../img/noise-grey-400.png);
     background-repeat: repeat;
-    transform: skewY(6deg);
     position: relative;
 
     // -webkit-box-shadow: 0 .5rem 1rem 0 rgba(#000, 0.1);
     // -moz-box-shadow: 0 .5rem 1rem 0 rgba(#000, 0.1);
     // box-shadow: 0 .5rem 1rem 0 rgba(#000, 0.1);
-
-    & > * {
-        transform: skewY(-6deg);
-        z-index: 10;
-    }
 
     &__text {
         display: flex;
@@ -38,4 +32,27 @@
     //     url('../img/random.png');
     // background-size: 40%;
     // background-repeat: repeat;
+
+    & .heading-secondary {
+        margin-bottom: 2rem;
+    }
+}
+
+.partners {
+    background-image: url(../img/noise-grey-400.png);
+    background-repeat: repeat;
+    position: relative;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        display: block;
+        text-align: center;
+        max-width: 70rem;
+        font-size: 2.5rem;
+    }
 }
