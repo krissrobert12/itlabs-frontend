@@ -158,6 +158,8 @@ img.responsive {
 .paragraph {
   font-size: 1.8rem;
   font-weight: 300; }
+  .paragraph--large {
+    font-size: 2.5rem; }
 
 /*
 ** COLORS
@@ -1301,8 +1303,39 @@ img.responsive {
   .partners__text {
     display: block;
     text-align: center;
-    max-width: 70rem;
-    font-size: 2.5rem; }
+    max-width: 70rem; }
+
+.team-section__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.team-section__img {
+  position: relative; }
+  .team-section__img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, rgba(69, 90, 164, 0.5), rgba(237, 125, 38, 0.5));
+    opacity: 1;
+    transition: all .2s; }
+  .team-section__img:hover::after {
+    opacity: 0; }
+  .team-section__img::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(69, 90, 164, 0.9);
+    z-index: -1; }
+  .team-section__img img {
+    display: block; }
 
 .cookie-info .row:not(:last-child) {
   margin-bottom: 3rem; }
