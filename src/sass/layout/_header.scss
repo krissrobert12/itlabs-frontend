@@ -1,10 +1,5 @@
 .header {
     width: 100%;
-    // padding: 10rem 0;
-    
-    // @include respond(br4) {
-    //     padding: 5rem 0;
-    // }
 
     &__img {
         width: 100%;
@@ -33,11 +28,13 @@
         }
     }
 
-    & .btn-update {
-        align-self: flex-start;
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-        @include respond(br4) {
-            align-self: unset;
+        & > *:not(:last-child) {
+            margin-right: 1rem;
         }
     }
 }
