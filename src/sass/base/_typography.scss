@@ -101,7 +101,19 @@
     font-weight: 300;
 
     &--large {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+
+        @include respond(br2) {
+            font-size: 2.3rem;
+        }
+
+        @include respond(br4) {
+            font-size: 2rem;
+        }
+
+        @include respond(br5) {
+            font-size: 1.8rem;
+        }
     }
 }
 

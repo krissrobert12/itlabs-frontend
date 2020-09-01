@@ -17,10 +17,6 @@
         @include respond(br4) {
             max-width: 60rem;
         }
-    
-        @include respond(br5){
-            max-width: 100%;
-        }
     }
 }
 
@@ -85,6 +81,8 @@
         }
     }
 
+
+
     /*
     ** BORDERS
     */
@@ -92,53 +90,6 @@
     &--borders {
         grid-gap: 0;
         row-gap: 0;
-
-        & > * {
-            padding: 2.5rem;
-            border-right: .2rem solid $color-grey-light-2;
-            border-bottom: .2rem solid $color-grey-light-2;
-            position: relative;
-
-            @include respond(br4) {
-                border: none;
-            }
-
-            &:hover {
-                border-color: transparent;
-
-                &::after {
-                    outline-width: 1rem;
-                }
-            }
-
-            &::after {
-                content: "";
-                z-index: 100;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                outline-width: 0rem;
-                outline-style: solid;
-                outline-color: $color-secondary;
-                transition: all .2s;
-            }
-        }
-
-        // Make sure no dafault colors are set
-        &__text p.paragraph{
-            color: inherit;
-        }
-
-        &__text {
-            color: $color-grey;
-            transition: all .2s;
-
-            &:hover {
-                color: $color-grey-dark;//#fff;
-            }
-        }
 
         &--3 > *:nth-child(3n) {
             border-right: none;
