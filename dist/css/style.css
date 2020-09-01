@@ -48,10 +48,10 @@ img.responsive {
   display: block; }
 
 .u-vpadding {
-  padding: 15rem 0; }
+  padding: 17rem 0; }
   @media only screen and (max-width: 56.25em) {
     .u-vpadding {
-      padding: 7rem 0; } }
+      padding: 10rem 0; } }
 
 .color-section--primary {
   background-color: #455aa4; }
@@ -86,6 +86,14 @@ img.responsive {
 
 .u-text-center {
   text-align: center; }
+
+::-moz-selection {
+  color: #fff;
+  background: #455aa4; }
+
+::selection {
+  color: #fff;
+  background: #455aa4; }
 
 .heading-primary {
   font-size: 6rem;
@@ -457,9 +465,19 @@ img.responsive {
     .search {
       justify-content: flex-end; } }
   .search__before {
-    order: 1; }
+    order: 1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none; }
   .search__after {
-    order: 3; }
+    order: 3;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none; }
   .search__input {
     order: 2;
     width: 1.3rem;
@@ -1295,13 +1313,17 @@ img.responsive {
     font-family: inherit;
     font-weight: 400;
     font-size: 1.8rem; }
-  .footer__input {
+    .footer__newsletter > * {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit; }
+  .footer__input[type=email] {
     outline-color: #7bbce8;
     border: 0;
     margin: 0;
-    padding: .9rem 1rem .5rem 1rem;
-    line-height: 1.2;
-    flex: 1; }
+    padding: .5rem 1rem;
+    flex: 1;
+    min-width: 1px; }
   .footer__submit {
     text-transform: uppercase;
     margin: 0;
@@ -1338,10 +1360,21 @@ img.responsive {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-  align-items: stretch; }
+  align-items: stretch;
+  position: relative; }
   @media only screen and (max-width: 56.25em) {
     .features-section__outline {
-      border: none; } }
+      border: none; }
+      .features-section__outline:not(:last-child) {
+        margin-bottom: 2rem; }
+        .features-section__outline:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          top: calc(100% + 1.1rem);
+          left: 40%;
+          width: 20%;
+          height: 1px;
+          background-color: #7bbce8; } }
   .features-section__outline::before {
     content: "";
     z-index: 20;

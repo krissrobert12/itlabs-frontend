@@ -42,10 +42,10 @@ img.responsive {
 }
 
 .u-vpadding {
-    padding: 15rem 0;
+    padding: 17rem 0;
 
     @include respond(br4) {
-        padding: 7rem 0;
+        padding: 10rem 0;
     }
 }
 
@@ -85,4 +85,13 @@ img.responsive {
 
 .u-text-center {
     text-align: center;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: $color-primary;
+}
+::selection {
+    color: #fff;
+    background: $color-primary;
 }

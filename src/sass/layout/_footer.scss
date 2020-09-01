@@ -91,19 +91,24 @@
         flex-direction: row;
         align-items: stretch;
         width: 100%;
-
         font-family: inherit;
         font-weight: 400;
         font-size: 1.8rem;
+
+        & > * {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
     }
 
-    &__input {
+    &__input[type=email] {
         outline-color: $color-secondary;
         border: 0;
         margin: 0;
-        padding: .9rem 1rem .5rem 1rem;
-        line-height: 1.2;
+        padding: .5rem 1rem;
         flex: 1;
+        min-width: 1px;
     }
 
     &__submit {
