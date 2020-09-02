@@ -3,10 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/js/index.js',
+        base: './src/js/index.js',
+        main: './src/js/main.js',
         template: './src/js/template.js',
-        cookie: './src/js/cookie-policy.js',
-        gdpr: './src/js/gdpr.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -19,17 +18,17 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
-            chunks: ['main']
+            chunks: ['base']
         }),
         new HtmlWebpackPlugin({
             filename: 'cookie-policy.html',
             template: './src/cookie-policy.html',
-            chunks: ['cookie']
+            chunks: ['base']
         }),
         new HtmlWebpackPlugin({
             filename: 'gdpr.html',
             template: './src/gdpr.html',
-            chunks: ['gdpr']
+            chunks: ['base']
         }),
         new HtmlWebpackPlugin({
             filename: 'template.html',
