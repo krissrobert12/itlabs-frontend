@@ -1,0 +1,35 @@
+.layout-blog {
+    
+    &__container {
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        column-gap: 5rem;
+    }
+
+    &__area {
+
+        &--posts {
+            grid-column: 1 / 2;
+        }
+
+        &--visited {
+            grid-column: 2 / 3;
+        }
+    }
+
+    &__tab {
+        background-color: $color-grey-light-1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__heading {
+        flex: 1;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 2rem;
+        color: $color-grey;
+    }
+}

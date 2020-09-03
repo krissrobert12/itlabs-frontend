@@ -1,0 +1,1 @@
+import {domStrings} from '../models/base';

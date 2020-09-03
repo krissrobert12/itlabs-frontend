@@ -1,5 +1,4 @@
 .header-blog {
-    margin-bottom: 1000px;
     // background-image: 
     //     linear-gradient(
     //         rgba($color-grey-light-1, 0.7),
@@ -82,7 +81,7 @@
         position: relative;
 
         & span {
-            color: $color-tertiary;
+            color: $color-secondary;
         }
     }
 }

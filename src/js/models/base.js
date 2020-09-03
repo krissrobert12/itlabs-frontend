@@ -11,7 +11,10 @@ export const domStrings = {
     circuitCanvas: '.circuit__canvas',
     circuitBackground: '.circuit__background',
     cookiePopup: '.cookie',
-    cookieBtn: '.cookie__btn'
+    cookieBtn: '.cookie__btn',
+    switch: '.switch',
+    switchLeft: '.switch__text--left',
+    switchRight: '.switch__text--right'
 }
 
 export const resizeAwait = (callback) => {

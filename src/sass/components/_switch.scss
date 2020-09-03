@@ -1,0 +1,56 @@
+.switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border-radius: .4rem;
+    overflow: hidden;
+
+    &--blog {
+        width: 20rem;
+        color: $color-grey;
+    }
+
+    &__text {
+        flex: 1 1 0px;
+        white-space: nowrap;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 300;
+        z-index: 20;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &--left {
+            color: #fff;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: $color-primary;
+        z-index: 10;
+        transition: all .2s ease-in-out;
+    }
+
+
+    // onclick
+    &.active &{
+        &__text--left {
+            color: inherit;
+        }
+
+        &__text--right {
+            color: #fff;
+        }
+
+        &__background {
+            left: 50%;
+            background-color: $color-secondary;
+        }
+    }
+}
