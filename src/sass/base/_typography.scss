@@ -4,7 +4,19 @@
     text-transform: uppercase;
     letter-spacing: .2rem;
     line-height: 1.2;
-    padding-bottom: 1rem;
+
+    @include respond(br2) {
+        font-size: 5rem;
+    }
+
+    @include respond(br4) {
+        font-size: 4rem;
+    }
+
+    @include respond(br5) {
+        letter-spacing: 0;
+        font-size: 3.5rem;
+    }
 
     &--main {
         color: $color-secondary;
@@ -23,18 +35,15 @@
         }
     }
 
-    @include respond(br2) {
-        font-size: 5rem;
+    &--blog {
+        color: inherit;
+
+        @include respond(br5) {
+            font-size: 2.5rem;
+        }
     }
 
-    @include respond(br4) {
-        font-size: 4rem;
-    }
-
-    @include respond(br5) {
-        letter-spacing: 0;
-        font-size: 3.5rem;
-    }
+    
 }
 
 .span {

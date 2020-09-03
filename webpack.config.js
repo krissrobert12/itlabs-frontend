@@ -34,6 +34,11 @@ module.exports = {
             filename: 'template.html',
             template: './src/template.html',
             chunks: ['template']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'blog.html',
+            template: './src/blog.html',
+            chunks: ['base']
         })
     ],
     module: {

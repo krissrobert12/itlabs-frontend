@@ -47,7 +47,17 @@ img.responsive {
     @include respond(br4) {
         padding: 10rem 0;
     }
+
+    &--small {
+        padding: 10rem;
+    
+        @include respond(br4) {
+            padding: 7rem;
+        }
+    }
 }
+
+
 
 .color-section {
     &--primary {background-color: $color-primary;}
