@@ -5,6 +5,7 @@
 import * as navView from './views/navView';
 import {domStrings, resizeAwait} from './models/base';
 import * as cookieView from './views/cookieView';
+import * as switchView from './views/switchView';
 
 /**
  * Navigation
@@ -22,6 +23,16 @@ const resetMenu = () => {
     }
 }
 resizeAwait(resetMenu);
+
+
+/**
+ * Switch btn
+ */
+
+if (switchView.left.length) {
+    switchView.left.forEach(leftBtn => leftBtn.addEventListener('click', switchView.checkState));
+    switchView.right.forEach(rightBtn => rightBtn.addEventListener('click', switchView.checkState));
+}
 
 /**
  * Cookies
