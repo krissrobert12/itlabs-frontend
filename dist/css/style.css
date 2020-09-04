@@ -1181,7 +1181,12 @@ img.responsive {
   overflow: hidden; }
   .switch--blog {
     width: 20rem;
-    color: #5a5a5a; }
+    color: #5a5a5a;
+    font-size: 1.6rem; }
+    @media only screen and (max-width: 35em) {
+      .switch--blog {
+        width: 16rem;
+        font-size: 1.3rem; } }
   .switch__text {
     flex: 1 1 0px;
     white-space: nowrap;
@@ -1275,8 +1280,11 @@ img.responsive {
     .visited-item__thumb img {
       display: block;
       height: 100%;
-      object-fit: cover;
-      object-position: center; }
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   .visited-item__content {
     margin-left: 1rem;
     display: flex;
@@ -1543,6 +1551,12 @@ img.responsive {
     grid-template-rows: max-content auto;
     column-gap: 5rem;
     row-gap: 5rem; }
+    @media only screen and (max-width: 67em) {
+      .layout-blog__container {
+        grid-template-columns: 7fr 5fr; } }
+    @media only screen and (max-width: 46.875em) {
+      .layout-blog__container {
+        grid-template-columns: 100%; } }
   .layout-blog__tab {
     background-color: #fafafa;
     padding: 1rem 2rem;
@@ -1555,6 +1569,10 @@ img.responsive {
     .layout-blog__tab--visited {
       grid-column: 2 / 3;
       grid-row: 1 / 2; }
+      @media only screen and (max-width: 46.875em) {
+        .layout-blog__tab--visited {
+          grid-column: 1 / 2;
+          grid-row: 3 / 4; } }
   .layout-blog__heading {
     flex: 1;
     text-transform: uppercase;
@@ -1566,13 +1584,25 @@ img.responsive {
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 6fr 6fr;
-    justify-items: center;
     column-gap: 5rem; }
+    @media only screen and (max-width: 46.875em) {
+      .layout-blog__posts {
+        grid-row: 2 / 3; } }
+    @media only screen and (max-width: 67em) {
+      .layout-blog__posts {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        column-gap: 0;
+        row-gap: 5rem; } }
   .layout-blog__visited {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: flex;
     flex-direction: column; }
+    @media only screen and (max-width: 46.875em) {
+      .layout-blog__visited {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5; } }
     .layout-blog__visited > *:not(:last-child) {
       margin-bottom: 3rem; }
 

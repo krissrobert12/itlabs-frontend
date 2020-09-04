@@ -9,6 +9,12 @@
     &--blog {
         width: 20rem;
         color: $color-grey;
+        font-size: 1.6rem;
+
+        @include respond(blog3) {
+            width: 16rem;
+            font-size: 1.3rem;
+        }
     }
 
     &__text {

@@ -25,6 +25,8 @@
         };
     }
 
+
+
     @if $breakpoint == menuMax {
         @media only screen and (max-width: 67em){
             @content
@@ -37,6 +39,26 @@
     }
     @if $breakpoint == menuMin {
         @media only screen and (min-width: 67em){
+            @content
+        };
+    }
+
+
+
+    @if $breakpoint == blog1 {
+        @media only screen and (max-width: 67em){
+            @content
+        };
+    }
+
+    @if $breakpoint == blog2 {
+        @media only screen and (max-width: 46.875em){
+            @content
+        };
+    }
+
+    @if $breakpoint == blog3 {
+        @media only screen and (max-width: 35em){
             @content
         };
     }
