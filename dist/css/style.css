@@ -1594,6 +1594,8 @@ img.responsive {
         grid-template-rows: auto;
         column-gap: 0;
         row-gap: 5rem; } }
+    .layout-blog__posts > * {
+      order: 9999; }
   .layout-blog__visited {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -1605,6 +1607,8 @@ img.responsive {
         grid-row: 4 / 5; } }
     .layout-blog__visited > *:not(:last-child) {
       margin-bottom: 3rem; }
+    .layout-blog__visited > * {
+      order: 9999; }
 
 .video-section {
   background-image: url(../img/noise-grey-400.png);
