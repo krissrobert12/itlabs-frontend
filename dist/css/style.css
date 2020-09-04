@@ -1584,7 +1584,8 @@ img.responsive {
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 6fr 6fr;
-    column-gap: 5rem; }
+    column-gap: 5rem;
+    row-gap: 5rem; }
     @media only screen and (max-width: 46.875em) {
       .layout-blog__posts {
         grid-row: 2 / 3; } }
@@ -1592,10 +1593,9 @@ img.responsive {
       .layout-blog__posts {
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        column-gap: 0;
-        row-gap: 5rem; } }
+        column-gap: 0; } }
     .layout-blog__posts > * {
-      order: 9999; }
+      order: 1; }
   .layout-blog__visited {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -1608,7 +1608,7 @@ img.responsive {
     .layout-blog__visited > *:not(:last-child) {
       margin-bottom: 3rem; }
     .layout-blog__visited > * {
-      order: 9999; }
+      order: 1; }
 
 .video-section {
   background-image: url(../img/noise-grey-400.png);

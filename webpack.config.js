@@ -5,6 +5,8 @@ module.exports = {
     entry: {
         base: './src/js/index.js',
         main: './src/js/main.js',
+        blog: './src/js/blog.js',
+
         template: './src/js/template.js',
     },
     output: {
@@ -38,7 +40,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'blog.html',
             template: './src/blog.html',
-            chunks: ['base']
+            chunks: ['base', 'blog']
         })
     ],
     module: {

@@ -59,16 +59,16 @@
         display: grid;
         grid-template-columns: 6fr 6fr;
         column-gap: 5rem;
+        row-gap: 5rem;
 
         @include respond(blog1) {
             grid-template-columns: 100%;
             grid-template-rows: auto;
             column-gap: 0;
-            row-gap: 5rem;
         }
 
         & > * {
-            order: 9999;
+            order: 1;
         }
     }
 
@@ -89,7 +89,7 @@
         }
 
         & > * {
-            order: 9999;
+            order: 1;
         }
     }
 }

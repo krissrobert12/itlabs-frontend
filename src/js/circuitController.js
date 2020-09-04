@@ -6,7 +6,6 @@ import Ciruit from './models/Circuit';
 import Line from './models/Line';
 import * as lineView from './views/lineView';
 import { domStrings } from './models/base';
-import { nodeName } from 'jquery';
 
 
 const canvasResize = (circuit) => {
