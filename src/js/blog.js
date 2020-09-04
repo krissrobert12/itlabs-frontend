@@ -2,6 +2,8 @@ import {domStrings} from './models/base';
 import * as visitedView from './views/visitedView';
 import Post from './models/Post';
 import * as Cookie from './models/cookies';
+import * as switchView from './views/switchView';
+
 
 // Build posts structure
 const postItems = [];
@@ -26,7 +28,7 @@ if (postIds.length) {
 }
 
 
-
+// Set cookie before redirecting to link
 const updateVisited = (e) => {
     e.preventDefault();
 
@@ -52,3 +54,31 @@ const updateVisited = (e) => {
         btn.addEventListener('click', updateVisited);
     });
 });
+
+
+
+/**
+ * Switch btn for blog
+ */
+
+const switchClick = (e) => {
+
+    // 1. get state of btn and update it
+    const switchState = switchView.toggleSwitch(e);
+
+    // 2. update post list
+    if(switchState.hasChanged) {
+        visitedView.updateOrder(postItems, postIdsArray, !switchState.active)
+    }
+}
+
+document.querySelectorAll(domStrings.switch).forEach(btn => {
+    btn.addEventListener('click', switchClick);
+});
+
+
+const init = () => {
+    visitedView.updateOrder(postItems, postIdsArray, 0);
+}
+
+init();

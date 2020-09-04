@@ -26,15 +26,6 @@ resizeAwait(resetMenu);
 
 
 /**
- * Switch btn
- */
-
-if (switchView.left.length) {
-    switchView.left.forEach(leftBtn => leftBtn.addEventListener('click', switchView.checkState));
-    switchView.right.forEach(rightBtn => rightBtn.addEventListener('click', switchView.checkState));
-}
-
-/**
  * Cookies
  */
 

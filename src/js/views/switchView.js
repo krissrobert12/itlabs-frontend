@@ -1,23 +1,30 @@
-import {domStrings} from '../models/base';
+import {domStrings, fmt} from '../models/base';
 
 // export const switches = document.querySelectorAll(domStrings.switch);
 
-export const left = document.querySelectorAll(domStrings.switchLeft);
+// export const left = document.querySelectorAll(domStrings.switchLeft);
 
-export const right = document.querySelectorAll(domStrings.switchRight);
+// export const right = document.querySelectorAll(domStrings.switchRight);
 
 const updateSwitch = (btn) => {
     btn.classList.toggle("active");
 };
 
-export const checkState = (e) => {
+export const toggleSwitch = (e) => {
 
     const type = e.target.dataset.type;
-    const switchBtn = e.target.closest(domStrings.switch);
-    const active = switchBtn.classList.contains('active');
+    const btn = e.target.closest(domStrings.switch);
+    const active = btn.classList.contains('active');
+    const hasChanged = type === 'left' ^ !active;
 
-    if(type === 'left' ^ !active) {
-        updateSwitch(switchBtn);
+    if(hasChanged) {
+        updateSwitch(btn);
+    }
+
+    return {
+        type,
+        btn,
+        active,
+        hasChanged
     }
 }   
-
