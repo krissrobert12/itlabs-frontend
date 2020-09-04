@@ -11,8 +11,13 @@ export default class Post {
         this.elem = elem;
     }
 
+    setDate() {
+        const year = new Date().getFullYear();
+        this.date = this.date.replace(/[1-9]{4}/, year);
+    }
+
     updateDate() {
-        
+        this.elem.querySelector(domStrings.postItemDate).innerHTML = this.date;
     }
     
     //Add methods for missing properties?

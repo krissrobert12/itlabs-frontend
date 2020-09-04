@@ -19,12 +19,8 @@ export const addItem = (data) => {
 
 
 export const updateOrder = (posts, visited, nextState) => {
-    console.log(posts);
-    console.log(visited);
-    console.log(nextState);
     let order = 9999;
     for(const id of visited) {
         posts.find(item => item.id === id).elem.style.order = !nextState ? order-- : 1;
     }
-
 };

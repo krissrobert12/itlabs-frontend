@@ -8,7 +8,10 @@ import * as switchView from './views/switchView';
 // Build posts structure
 const postItems = [];
 document.querySelectorAll(domStrings.postItem).forEach(item => {
-    postItems.push(new Post(item));
+    const post = new Post(item);
+    post.setDate();
+    post.updateDate();
+    postItems.push(post);
 });
 
 
